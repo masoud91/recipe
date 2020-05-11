@@ -57,7 +57,7 @@ class ProtectedTagsApiTests(TestCase):
         )
 
         Tag.objects.create(user=another_user, name='Fruity')
-        current_user_tag = Tag.objects.create(user=self.user, name='Steak')
+        current_user_tag = Tag.objects.create(user=self.user, name='Vegan')
 
         response = self.client.get(TAGS_URL)
 
